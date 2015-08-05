@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   
   resources :check_lists do
-    resources :items 
+    resources :items do
+    	member do
+    		patch :complete
+      end 
+    end 
   end 
   
   devise_for :users
