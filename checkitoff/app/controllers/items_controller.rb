@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+	
 	before_action :set_check_list
 	before_action :set_item, except: [:create]
 	
