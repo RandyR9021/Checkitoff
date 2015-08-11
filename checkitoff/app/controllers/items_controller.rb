@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
 	end
 
 	def complete
-		@item.update_attribute(:completed_at, Time.now)
+		@item.update_attributes(completed: true)
 		redirect_to @check_list, notice: "Item was completed."
 	end
 
@@ -36,6 +36,6 @@ class ItemsController < ApplicationController
 	end
 
 	def item_params
-		params[:item].permit(:content)
+		params[:item].permit(:content, :completed)
 	end
 end
