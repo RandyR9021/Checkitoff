@@ -3,8 +3,8 @@
 # Table name: check_lists
 #
 #  id          :integer          not null, primary key
-#  title       :string
-#  description :text
+# title       :string
+# description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
