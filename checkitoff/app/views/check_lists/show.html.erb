@@ -1,20 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @check_list.title %>
-</p>
+<h2 class="check_list_title"><%= @check_list.title %></p>
+  <p class="check_list_sub_title"><%= @check_list.description %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @check_list.description %>
-</p>
 <div id="items_wrapper">
 	<%= render @check_list.items %>
 	<div id="form">
 		<%= render "items/form" %>
 	</div>
 </div>
-
+<div class="links">
 <%= link_to 'Edit', edit_check_list_path(@check_list) %> |
 <%= link_to 'Back', check_lists_path %>
+</div>
