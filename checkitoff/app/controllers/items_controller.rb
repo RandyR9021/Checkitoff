@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
 	def create
 		@item = @check_list.items.create(item_params)
+		@item.user = current_user
 		redirect_to @check_list
 	end
 
