@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     else
       flash[:error] = "Invalid user information."
       redirect_to edit_user_registration_path
+    end
   end
 
   def show

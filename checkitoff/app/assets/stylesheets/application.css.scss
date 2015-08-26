@@ -64,7 +64,7 @@
   .check_list_title {
   	text-align: center;
   	font-weight: 700;
-  	font-size: 2.5rem;
+  	font-size: 2.0rem;
   	text-transform: uppercase;
   	color: white;
   	margin: 0;
@@ -81,9 +81,9 @@
   .check_list_sub_title {
   	margin: 0 0 3em 0;
   	text-align: center;
-  	font-size: 0.9em;
+  	font-size: 0.6em;
   	color: $dark;
-  	font-weight: 100;
+  	font-weight: 1000;
   }
 
   .index_row {
@@ -106,11 +106,11 @@
   			border-right: 1px solid rgba(250,250,250, .3);
   			padding: 1em 0;
   		}
-  		.todo_item {
+  		.item {
   			width: 80%;
   			float: left;
   			p {
-  				margin: 0;
+  				margin: 1;
   				padding: 1em;
   				color: $dark;
   				font-weight: 100;
@@ -167,7 +167,7 @@
   	display: block;
   	margin: 1.5em auto 0 auto;
   	text-align: center;
-  	font-size: 0.8em;
+  	font-size: 0.6em;
   	color: white;
   	a {
   		color: white;

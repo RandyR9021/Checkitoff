@@ -3,11 +3,9 @@
     <%= link_to complete_check_list_item_path(@check_list, item.id), method: :patch, class: "pull-left" do %>
       <i style="opacity: 0.4;" class="fa fa-check"></i>
     <% end %>
+  </div>
+    <div class="trash">
     <span style="opacity: 0.4;" class=<%= item.completed ? "completed" : ""%> ><%= item.content %></span>
-    <%= link_to "Delete", check_list_item_path(@check_list, item.id),
-    method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right" %>
-  </div>
-  <div class="trash">
-
-  </div>
-</div>
+    <%= link_to check_list_item_path(@check_list, item.id), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right" do %>
+  <i class="fa fa-trash"></i>
+  <% end %>

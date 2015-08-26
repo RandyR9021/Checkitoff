@@ -3,7 +3,8 @@ class CheckListsController < ApplicationController
 
 
   def index
-    @check_lists = CheckList.all
+
+    @check_lists = current_user.check_lists
   end
 
   def show
@@ -17,7 +18,7 @@ class CheckListsController < ApplicationController
   end
 
   def create
-    @check_list = CheckList.new(check_list_params)
+    @check_list = current_user.check_lists.build(check_list_params)
 
     respond_to do |format|
       if @check_list.save
