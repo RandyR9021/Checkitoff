@@ -8,4 +8,5 @@
     <span style="opacity: 0.4;" class=<%= item.completed ? "completed" : ""%> ><%= item.content %></span>
     <%= link_to check_list_item_path(@check_list, item.id), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right" do %>
   <i class="fa fa-trash"></i>
+  <small class="pull-right white inliner days_left"><%= item.days_left %> days left</small>
   <% end %>
