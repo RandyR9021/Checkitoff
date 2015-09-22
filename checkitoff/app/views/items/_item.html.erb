@@ -1,14 +1,16 @@
 <div clas="row clearfix">
-  <div class="complete">
-    <%= link_to complete_check_list_item_path(@check_list, item.id), method: :patch, class: "pull-left" do %>
+  <!-- <div class="complete"> -->
+    <%= link_to complete_check_list_item_path(@check_list, item.id), method: :patch, class: "pull-left checkmark" do %>
       <i style="opacity: 0.4;" class="fa fa-check"></i>
     <% end %>
-  </div>
-    <div class="trash">
+  <!-- </div> -->
+  <!-- <div class="trash"> -->
     <span style="opacity: 0.4;" class=<%= item.completed ? "completed" : ""%> ><%= item.content %></span>
-    <%= link_to check_list_item_path(@check_list, item.id), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right" do %>
-  <i class="fa fa-trash"></i>
-  <% end %>
+    <%= link_to check_list_item_path(@check_list, item.id), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right trash" do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+  <!-- </div> -->
+  <!-- <div class="days left"> -->
+    <small class="pull-right white inliner days_left"><%= item.days_left %> days left</small>
+  <!-- </div> -->
 </div>
-  <div class="days left">
-  <small class="pull-right white inliner days_left"><%= item.days_left %> days left</small>
