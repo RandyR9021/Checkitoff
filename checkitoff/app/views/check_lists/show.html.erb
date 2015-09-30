@@ -12,5 +12,5 @@
 <div class="links">
   <%= link_to 'Edit', edit_check_list_path(@check_list) %> |
   <%= link_to 'Home', check_lists_path %> |
-  <%= link_to 'Delete', edit_check_list_path(@check_list) %>
+  <%= link_to 'Delete', check_list_path(@check_list), method: :delete, data: {confirm: "Are you sure?"} %>
 </div>
